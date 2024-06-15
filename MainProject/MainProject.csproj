@@ -1,0 +1,152 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6f2242ec-9cd9-499b-9de5-a9bd1f933558</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="AutoMapper.Collection" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.EnumMapping" Version="3.2.0" />
+    <PackageReference Include="AutoMapper.Collection.EntityFrameworkCore" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.AspNetCore.OData.EFCore" Version="5.0.1" />
+    <PackageReference Include="AutoMapper.Collection.EntityFramework" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Serilog" Version="4.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Features\" />
+    <None Remove="Features\Authentication\" />
+    <None Remove="Features\User\" />
+    <None Remove="Features\Authentication\Domain\" />
+    <None Remove="Features\Authentication\Application\" />
+    <None Remove="Features\Authentication\Presentation\" />
+    <None Remove="Features\Authentication\Application\Services\" />
+    <None Remove="Features\Authentication\Application\IServices\" />
+    <None Remove="Features\Authentication\Domain\Entities\" />
+    <None Remove="Features\Authentication\Domain\ApiModels\" />
+    <None Remove="Features\Authentication\Presentation\Controllers\" />
+    <None Remove="Common\" />
+    <None Remove="Common\Constants\" />
+    <None Remove="Features\Authentication\Domain\Filters\" />
+    <None Remove="Features\User\Domain\" />
+    <None Remove="Features\User\Domain\Entities\" />
+    <None Remove="Features\Core\" />
+    <None Remove="Features\Core\Domain\" />
+    <None Remove="Features\Core\Infrastructure\" />
+    <None Remove="Features\Core\Domain\IRepositories\" />
+    <None Remove="Features\Core\Infrastructure\Repositories\" />
+    <None Remove="Features\Core\Domain\Entities\" />
+    <None Remove="Features\Core\Domain\Entities\Headers\" />
+    <None Remove="Features\User\Domain\Filters\" />
+    <None Remove="Features\User\Domain\IRepositories\" />
+    <None Remove="Features\User\Presentation\" />
+    <None Remove="Features\User\Application\" />
+    <None Remove="Features\User\Application\IServices\" />
+    <None Remove="Features\User\Application\Services\" />
+    <None Remove="Features\User\Presentation\Controllers\" />
+    <None Remove="Features\User\Infrastructure\" />
+    <None Remove="Features\User\Infrastructure\Repositories\" />
+    <None Remove="Features\Authentication\Infrastructure\" />
+    <None Remove="Features\Authentication\Infrastructure\Repositories\" />
+    <None Remove="Features\Authentication\Infrastructure\IRepositories\" />
+    <None Remove="Features\Core\Domain\ApiModels\" />
+    <None Remove="Features\Core\Domain\ApiModels\ResponseDTO\" />
+    <None Remove="Features\User\Domain\ApiModels\" />
+    <None Remove="Features\User\Domain\ApiModels\RequestDTO\" />
+    <None Remove="Features\User\Domain\ApiModels\ResponseDTO\" />
+    <None Remove="Features\Core\Application\" />
+    <None Remove="Features\Core\Application\IServices\" />
+    <None Remove="Features\Core\Application\Services\" />
+    <None Remove="Features\Core\Infrastructure\DataAccess\" />
+    <None Remove="Features\BackOffice\" />
+    <None Remove="Features\BackOffice\Application\" />
+    <None Remove="Features\BackOffice\Presentation\" />
+    <None Remove="Features\BackOffice\Application\IServices\" />
+    <None Remove="Features\BackOffice\Application\Services\" />
+    <None Remove="Features\BackOffice\Domain\" />
+    <None Remove="Features\BackOffice\Domain\ApiModels\" />
+    <None Remove="Features\BackOffice\Domain\ApiModels\ResponseDTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Features\Authentication\" />
+    <Folder Include="Features\User\" />
+    <Folder Include="Features\Authentication\Domain\" />
+    <Folder Include="Features\Authentication\Application\" />
+    <Folder Include="Features\Authentication\Presentation\" />
+    <Folder Include="Features\Authentication\Application\Services\" />
+    <Folder Include="Features\Authentication\Application\IServices\" />
+    <Folder Include="Features\Authentication\Domain\Entities\" />
+    <Folder Include="Features\Authentication\Domain\ApiModels\" />
+    <Folder Include="Features\Authentication\Presentation\Controllers\" />
+    <Folder Include="Common\" />
+    <Folder Include="Common\Constants\" />
+    <Folder Include="Features\Authentication\Domain\Filters\" />
+    <Folder Include="Features\User\Domain\" />
+    <Folder Include="Features\User\Domain\Entities\" />
+    <Folder Include="Features\Core\" />
+    <Folder Include="Features\Core\Domain\" />
+    <Folder Include="Features\Core\Infrastructure\" />
+    <Folder Include="Features\Core\Domain\IRepositories\" />
+    <Folder Include="Features\Core\Infrastructure\Repositories\" />
+    <Folder Include="Features\Core\Domain\Entities\" />
+    <Folder Include="Features\Core\Domain\Entities\Headers\" />
+    <Folder Include="Features\User\Domain\Filters\" />
+    <Folder Include="Features\User\Domain\IRepositories\" />
+    <Folder Include="Features\User\Presentation\" />
+    <Folder Include="Features\User\Application\" />
+    <Folder Include="Features\User\Application\IServices\" />
+    <Folder Include="Features\User\Application\Services\" />
+    <Folder Include="Features\User\Presentation\Controllers\" />
+    <Folder Include="Features\User\Infrastructure\" />
+    <Folder Include="Features\User\Infrastructure\Repositories\" />
+    <Folder Include="Features\Authentication\Infrastructure\" />
+    <Folder Include="Features\Authentication\Infrastructure\Repositories\" />
+    <Folder Include="Features\Authentication\Infrastructure\IRepositories\" />
+    <Folder Include="Features\Core\Domain\ApiModels\" />
+    <Folder Include="Features\Core\Domain\ApiModels\ResponseDTO\" />
+    <Folder Include="Features\User\Domain\ApiModels\" />
+    <Folder Include="Features\User\Domain\ApiModels\RequestDTO\" />
+    <Folder Include="Features\User\Domain\ApiModels\ResponseDTO\" />
+    <Folder Include="Features\Core\Application\" />
+    <Folder Include="Features\Core\Application\IServices\" />
+    <Folder Include="Features\Core\Application\Services\" />
+    <Folder Include="Features\Core\Infrastructure\DataAccess\" />
+    <Folder Include="Features\BackOffice\" />
+    <Folder Include="Features\BackOffice\Application\" />
+    <Folder Include="Features\BackOffice\Presentation\" />
+    <Folder Include="Features\BackOffice\Application\IServices\" />
+    <Folder Include="Features\BackOffice\Application\Services\" />
+    <Folder Include="Features\BackOffice\Domain\" />
+    <Folder Include="Features\BackOffice\Domain\ApiModels\" />
+    <Folder Include="Features\BackOffice\Domain\ApiModels\ResponseDTO\" />
+  </ItemGroup>
+</Project>
