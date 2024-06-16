@@ -39,6 +39,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="IPE.SmsIr" Version="1.2.7" />
   </ItemGroup>
 
   <ItemGroup>
